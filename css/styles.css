@@ -1,0 +1,604 @@
+/* General Reset */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Font */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    font-size: 16px; /* Base font size */
+}
+
+/* Header */
+header {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem; /* Adjusted padding */
+}
+
+header .logo img {
+    height: 3rem; /* Consistent unit with flexbox */
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 2rem; /* Using rem for better scaling */
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 4rem 2rem; /* Adjusted padding for responsiveness */
+}
+
+.hero h1 {
+    font-size: 2.5rem; /* Using rem for scalability */
+}
+
+.hero p {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #555; /* Darken on hover */
+}
+
+/* Overview Section */
+.overview {
+    text-align: center;
+    padding: 4rem 2rem; /* Adjusted padding */
+}
+
+.overview h2 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 4rem;
+}
+
+footer .social-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+footer .social-links li {
+    margin: 0 1rem; /* Adjusted for consistent spacing */
+}
+
+footer .social-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer .social-links a:hover {
+    color: #007bff; /* Hover color */
+}
+
+/* About Us Page */
+.about-us {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.about-us h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.about-us p {
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    font-size: 1.2rem;
+}
+
+/* Founder Section */
+.founders {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.founder {
+    max-width: 600px;
+    text-align: left;
+}
+
+.founder h3 {
+    font-size: 1.8rem;
+    color: #333;
+}
+
+.founder p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Values Section */
+.values {
+    margin-top: 3rem;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.values h2 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.values ul {
+    list-style: none;
+    padding: 0;
+}
+
+.values li {
+    margin: 1.5rem 0;
+}
+
+.values li strong {
+    color: #333;
+}
+
+/* Services Page */
+.services-overview {
+    text-align: center;
+    padding: 4rem 2rem; /* Adjusted padding */
+}
+
+.services-overview h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.services-overview p {
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    font-size: 1.2rem;
+}
+
+/* Solutions Section */
+.solutions {
+    padding: 4rem 2rem;
+    background-color: #f4f4f4;
+}
+
+.solutions h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.solution-item {
+    margin-bottom: 2rem;
+}
+
+.solution-item h3 {
+    font-size: 1.8rem;
+    color: #333;
+}
+
+.solution-item p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #666;
+}
+
+/* Services Section */
+.additional-services {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.additional-services h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.service-item {
+    margin-bottom: 2rem;
+}
+
+.service-item h3 {
+    font-size: 1.8rem;
+    color: #333;
+}
+
+.service-item p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #666;
+}
+
+/* Portfolio Overview Section */
+.portfolio-overview {
+    text-align: center;
+    padding: 4rem 2rem; /* More padding for a spacious layout */
+}
+
+.portfolio-overview h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.portfolio-overview p {
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    font-size: 1.2rem;
+    color: #666;
+}
+
+/* Projects Section */
+.projects {
+    padding: 4rem 2rem;
+    background-color: #f4f4f4;
+}
+
+.projects h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+/* Project Item */
+.project-item {
+    margin-bottom: 3rem;
+    background-color: #fff;
+    padding: 2rem;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.project-item h3 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.project-item p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+.project-item a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.project-item a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 4rem;
+}
+
+footer .social-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+footer .social-links li {
+    margin: 0 1rem;
+}
+
+footer .social-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer .social-links a:hover {
+    color: #007bff;
+}
+
+/* Blog Overview Section */
+.blog-overview {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.blog-overview h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.blog-overview p {
+    max-width: 800px;
+    margin: 0 auto 30px;
+    font-size: 1.2em;
+}
+
+/* Blog Posts Section */
+.blog-posts {
+    padding: 40px 20px;
+    background-color: #f4f4f4;
+}
+
+.blog-posts h2 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Blog Post Items */
+.blog-post-item {
+    margin-bottom: 30px;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.blog-post-item h3 {
+    font-size: 1.8em;
+    color: #333;
+}
+
+.blog-post-item p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #666;
+    margin: 10px 0;
+}
+
+.blog-post-item a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.blog-post-item a:hover,
+.blog-post-item a:focus {
+    text-decoration: underline;
+    color: #0056b3; /* Slightly darker blue */
+}
+
+.blog-post-item a:focus {
+    outline: 2px solid #0056b3; /* Visible focus outline for accessibility */
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 4rem;
+}
+
+footer .social-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+footer .social-links li {
+    margin: 0 1rem;
+}
+
+footer .social-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer .social-links a:hover {
+    color: #007bff; /* Hover color */
+}
+
+/* Contact Page */
+.contact-overview {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.contact-overview h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.contact-overview p {
+    max-width: 800px;
+    margin: 0 auto 30px;
+    font-size: 1.2em;
+}
+
+/* Contact Page */
+.contact-overview {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.contact-overview h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.contact-overview p {
+    max-width: 800px;
+    margin: 0 auto 30px;
+    font-size: 1.2em;
+}
+
+/* Contact Form Section */
+.contact-form {
+    padding: 40px 20px;
+    background-color: #f4f4f4;
+}
+
+.contact-form h2 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.contact-form .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    font-size: 1.2em;
+    color: #333;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.contact-form input:focus, 
+.contact-form textarea:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.1em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Stack logo and nav on small screens */
+        text-align: center;
+        padding: 1.5rem 1rem;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        margin-top: 1rem;
+    }
+
+    header nav ul li {
+        margin-left: 0;
+        margin-bottom: 1rem; /* Space out the links */
+    }
+
+    .hero h1 {
+        font-size: 2rem; /* Smaller heading on mobile */
+    }
+
+    .cta-button {
+        padding: 0.8rem 1.5rem; /* Adjust button size */
+    }
+
+    .overview h2,
+    .values h2,
+    .solutions h2,
+    .additional-services h2 {
+        font-size: 2rem; /* Smaller heading sizes for mobile */
+    }
+
+    .solution-item,
+    .service-item {
+        margin-bottom: 1rem; /* More compact spacing on mobile */
+    }
+
+    .founders {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .founder {
+        text-align: center; /* Center content for mobile */
+    }
+
+    .values {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 3rem 1rem; /* Less padding on very small screens */
+    }
+
+    .cta-button {
+        width: 100%; /* Full-width button */
+    }
+}
