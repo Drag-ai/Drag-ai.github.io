@@ -3,310 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Drag-AI - AI-Powered Solutions</title>
-    <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            font-family: 'Arial', sans-serif;
-            background: linear-gradient(to right, #003366, #0066cc); /* Dark blue gradient */
-            color: #ffffff;
-        }
-        header {
-            background-color: #0056b3; /* Darker blue for header */
-            color: #ffffff;
-            padding: 50px 0;
-            text-align: center;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-        }
-        header h1 {
-            font-size: 3.5em;
-            margin: 0;
-            letter-spacing: 2px;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: #007bff; /* Uniform nav background */
-            padding: 15px 0;
-            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
-        }
-        nav a {
-            color: #ffffff;
-            text-decoration: none;
-            padding: 10px 15px;
-            margin: 0 10px;
-            transition: background 0.3s;
-            border-radius: 5px;
-        }
-        nav a:hover {
-            background-color: #004080; /* Darker blue for hover effect */
-            color: #ffffff;
-        }
-        .hero {
-            padding: 120px 20px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
-        }
-        .hero h1 {
-            font-size: 4em;
-            margin: 0;
-            text-shadow: 0 3px 12px rgba(0, 0, 0, 0.5);
-        }
-        .hero p {
-            font-size: 1.4em;
-            color: #d1e7ed;
-            margin-bottom: 20px;
-        }
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: auto;
-            padding: 20px;
-        }
-        .section {
-            background-color: #1a2530; /* Darker section background */
-            padding: 50px 20px;
-            margin: 20px 0;
-            border-radius: 15px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-        }
-        .section h2 {
-            text-align: center;
-            color: #ffffff; /* White for headings */
-            font-size: 2.6em;
-            margin-bottom: 15px;
-            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
-        }
-        .section p {
-            text-align: center;
-            margin: 10px 0 30px;
-            font-size: 1.1em;
-            color: #ecf0f1;
-        }
-        .services, .solutions, .expertise {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-        }
-        .service-item, .solution-item, .expertise-item {
-            flex: 1 1 30%;
-            margin: 15px;
-            padding: 30px;
-            background-color: #007bff; /* Bright blue */
-            border-radius: 10px;
-            transition: transform 0.3s, box-shadow 0.3s;
-            color: #ffffff;
-            text-align: center;
-            cursor: pointer;
-        }
-        .service-item:hover, .solution-item:hover, .expertise-item:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 0 20px rgba(0, 123, 255, 0.5); /* Hover shadow effect */
-            background-color: #0056b3; /* Lighter blue on hover */
-            color: #ffffff;
-        }
-        .service-item h3, .solution-item h3 {
-            color: #ffffff; /* White for headings */
-            margin-bottom: 10px;
-            font-size: 1.4em;
-        }
-        .btn {
-            display: inline-block;
-            background-color: #007bff; /* Bright blue button */
-            color: #ffffff; /* White text */
-            padding: 10px 25px;
-            border-radius: 25px;
-            text-decoration: none;
-            transition: background 0.3s;
-            font-size: 1.1em;
-            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
-        }
-        .btn:hover {
-            background-color: #004080; /* Darker blue on hover */
-            color: #ffffff;
-        }
-        .testimonial {
-            background-color: #0056b3; /* Darker blue for testimonial */
-            padding: 30px;
-            margin: 20px 0;
-            border-radius: 10px;
-            text-align: center;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-        }
-        .testimonial p {
-            font-style: italic;
-            font-size: 1.1em;
-            color: #ecf0f1;
-        }
-        .interactive-images {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            margin-top: 20px;
-        }
-        .interactive-image {
-            flex: 1 1 30%;
-            margin: 10px;
-            position: relative;
-            overflow: hidden;
-            border-radius: 10px;
-            cursor: pointer;
-            transition: transform 0.3s;
-        }
-        .interactive-image img {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-            transition: transform 0.3s;
-        }
-        .interactive-image:hover img {
-            transform: scale(1.05); /* Zoom effect on hover */
-        }
-        footer {
-            background-color: #007bff; /* Uniform footer background */
-            color: #ffffff;
-            text-align: center;
-            padding: 25px 0;
-            margin-top: 30px;
-        }
-        footer a {
-            color: #ffffff; /* White */
-            text-decoration: none;
-            font-weight: bold;
-        }
-        footer a:hover {
-            color: #ffffff; /* Lighter hover color */
-        }
-        @media (max-width: 768px) {
-            .services, .solutions, .expertise {
-                flex-direction: column;
-                align-items: center;
-            }
-            .hero h1 {
-                font-size: 2.8em;
-            }
-            .interactive-images {
-                flex-direction: column;
-                align-items: center;
-            }
-            .service-item, .solution-item, .expertise-item {
-                flex: 1 1 80%; /* Full width on smaller screens */
-            }
-        }
-    </style>
+    <meta name="description" content="Drag-AI offers AI and ML solutions for businesses, specializing in Data Labeling, Data Modeling, Model Deployment, Predictive Analytics, and more.">
+    <title>Drag-AI | Home</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 </head>
 <body>
+    <!-- Header with logo and navigation -->
     <header>
-        <h1>Welcome to Drag-AI</h1>
-        <p>Transforming Businesses with AI-Powered Solutions</p>
+        <a href="index.html" class="logo" aria-label="Go to Drag-AI homepage">
+            <img src="images/logo.png" alt="Drag-AI Logo" />
+        </a>
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
     </header>
-    <nav>
-        <a href="#services">Services</a>
-        <a href="#solutions">Solutions</a>
-        <a href="#expertise">Expertise</a>
-        <a href="#testimonials">Testimonials</a>
-        <a href="#contact">Contact</a>
-    </nav>
+
+    <!-- Hero Section -->
     <section class="hero">
-        <h1>Empower Your Business with AI</h1>
-        <p>Innovative, efficient AI solutions to drive growth and transformation.</p>
-        <a href="#contact" class="btn">Get in Touch</a>
+        <h1>Welcome to Drag-AI</h1>
+        <p>Empowering Businesses with AI and ML Solutions</p>
+        <a href="services.html" class="cta-button" role="button" aria-label="Explore our services">Explore Our Services</a>
     </section>
-    
-    <div class="container">
-        <section class="section" id="services">
-            <h2>Our Services</h2>
-            <div class="services">
-                <div class="service-item">
-                    <h3>Data Labeling and Creation</h3>
-                    <p>Efficiently preparing and tagging data to train AI models with high precision.</p>
-                </div>
-                <div class="service-item">
-                    <h3>Data Collection</h3>
-                    <p>Robust data gathering from diverse sources to build comprehensive datasets.</p>
-                </div>
-                <div class="service-item">
-                    <h3>Data Modeling</h3>
-                    <p>Custom AI models for accurate predictions and deep analysis tailored to your needs.</p>
-                </div>
-                <div class="service-item">
-                    <h3>Model Optimization</h3>
-                    <p>Optimizing models for efficiency, reducing time complexity for better performance.</p>
-                </div>
-                <div class="service-item">
-                    <h3>Model Deployment</h3>
-                    <p>Seamless integration and deployment of AI models into your business processes.</p>
-                </div>
-            </div>
-        </section>
 
-        <section class="section" id="solutions">
-            <h2>Our Solutions</h2>
-            <div class="solutions">
-                <div class="solution-item">
-                    <h3>Predictive Analytics</h3>
-                    <p>Anticipate IT failures and optimize server loads for proactive management.</p>
-                </div>
-                <div class="solution-item">
-                    <h3>Intelligent Chatbots</h3>
-                    <p>24/7 AI-driven customer support to handle queries efficiently.</p>
-                </div>
-                <div class="solution-item">
-                    <h3>Network Security</h3>
-                    <p>Advanced intrusion detection using deep learning techniques.</p>
-                </div>
-                <div class="solution-item">
-                    <h3>Data Management & Cleanup</h3>
-                    <p>Automate data categorization and cleanup using machine learning techniques.</p>
-                </div>
-                <div class="solution-item">
-                    <h3>Generative AI</h3>
-                    <p>Innovative solutions using LLM and diffusion for creative content generation.</p>
-                </div>
-            </div>
-            <div class="interactive-images">
-                <div class="interactive-image">
-                    <img src=""C:\Users\Nishit\OneDrive\Desktop\Project AI Service\Data Analytics.png"" alt="Data Analysis">
-                </div>
-                <div class="interactive-image">
-                    <img src=""C:\Users\Nishit\OneDrive\Desktop\Project AI Service\Chatbot.png"" alt="AI Chatbot">
-                </div>
-                <div class="interactive-image">
-                    <img src=""C:\Users\Nishit\OneDrive\Desktop\Project AI Service\Network Security.png"" alt="Network Security">
-                </div>
-            </div>
-        </section>
+    <!-- Overview Section -->
+    <section class="overview">
+        <h2>What We Do</h2>
+        <p>Drag-AI specializes in Data Labeling, Data Modeling, Model Deployment, and Hyper-Automation to help businesses achieve their AI goals. Our services include Predictive Analytics, Intelligent Chatbots, and Network Security.</p>
+    </section>
 
-        <section class="section" id="expertise">
-            <h2>Our Expertise</h2>
-            <p>Specializing in various AI technologies to meet your business needs.</p>
-            <div class="expertise">
-                <div class="expertise-item">Machine Learning</div>
-                <div class="expertise-item">Deep Learning</div>
-                <div class="expertise-item">Natural Language Processing (NLP)</div>
-                <div class="expertise-item">Computer Vision</div>
-                <div class="expertise-item">Intelligent Automation</div>
-            </div>
-        </section>
-
-        <section class="testimonial" id="testimonials">
-            <h2>Testimonials</h2>
-            <p>"Drag-AI's solutions transformed our data strategy and increased our efficiency!"</p>
-            <p>- Satisfied Client</p>
-        </section>
-    </div>
-
-    <footer id="contact">
-        <p>&copy; 2024 Drag-AI. All Rights Reserved.</p>
-        <p>Contact us at <a href="mailto:info@drag-ai.com">info@drag-ai.com</a></p>
-        <div>
-            <a href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn</a> |
-            <a href="https://twitter.com/yourprofile" target="_blank">Twitter</a> |
-            <a href="https://www.facebook.com/yourprofile" target="_blank">Facebook</a>
-        </div>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Drag-AI. All rights reserved.</p>
+        <ul class="social-links">
+            <li><a href="https://www.linkedin.com/company/drag-ai/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+            <li><a href="https://www.x.com/drag-ai" target="_blank" rel="noopener noreferrer">Twitter</a></li>
+        </ul>
     </footer>
 </body>
 </html>
